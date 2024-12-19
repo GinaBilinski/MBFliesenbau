@@ -1,0 +1,231 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #444;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #363636;
+}
+.navbar-brand, .nav-link {
+    color: #fff !important;
+    font-size: 1.2rem;
+    position: relative;
+    padding: 10px 20px;
+    margin: 0 5px;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #D1CBC1;
+    transition: width 0.3s ease-in-out;
+}
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/* Hamburger-Icon in Weiß */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-toggler-icon {
+    filter: invert(1) brightness(1000%); /* Heller Icon */
+}
+
+
+
+/* Header Image */
+.header-image {
+    background-size: cover;
+    background-position: center;
+    height: 40vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+}
+
+
+.header-image h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Schmaler Textbereich */
+.narrow-text {
+    max-width: 900px;
+    margin: 0 auto;
+}
+/* Allgemeine Styling für graue Bereiche */
+.bg-gray {
+    background-color: #F2EEE8;
+}
+.bg-highlight {
+    background-color: #F2EEE8;
+}
+
+
+footer {
+    background-color: #363636;
+    color: #F2EEE8;
+    font-size: 0.75rem;
+}
+
+footer a {
+    color: #F2EEE8;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .bi {
+    font-size: 1.2rem;
+    vertical-align: middle;
+}
+footer h5 {
+    font-size: 1.1rem; /* Kleinere Schriftgröße für Überschriften */
+
+}
+
+
+.icon-box img {
+    max-width: 60px;
+    margin-bottom: 15px;
+
+}
+
+.bremen-image {
+    background-image: url('img/bremenSkyline.png');
+    background-size: cover;
+    background-position: center;
+    height: 40vh; /* Höhe des Hintergrundbereichs */
+}
+
+
+/* Animationen */
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.slide-in-left.visible,
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
+.animate-on-scroll {
+    opacity: 0; /* Unsichtbar */
+
+}
+
+
+/* Sichtbar und mit Drehung */
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0) rotateX(0deg);
+    animation: rotateButton 1s ease-in-out;
+}
+
+/* Animation für vertikale Drehung */
+@keyframes rotateButton {
+    0% {
+        transform: translateY(0) rotateX(90deg);
+    }
+    100% {
+        transform: translateY(0) rotateX(0deg);
+    }
+}
+
+/* Styling für den Button */
+.btn-primary {
+    background-color: #D1CBC1;
+    border: none;
+    color: #444;
+    text-transform: uppercase;
+}
+
+.btn-primary:hover {
+    background-color: #333333;
+}
+
+
+.image-container {
+    max-width: 300px;
+    margin-left: 20px;
+    position: relative;
+}
+
+.fixed-image {
+    width: 250px; /* Feste Breite */
+    height: 250px; /* Feste Höhe */
+    object-fit: cover; 
+}
+
+.card {
+    color: #444;
+}
+
+.card-img-top {
+    height: 300px; /* Einfache Höhe festlegen */
+    object-fit: cover; /* Bild anpassen, ohne Verzerrung */
+}
+
+
+/* Card Hover-Effekt */
+.card:hover {
+    transform: translateY(-10px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Kontaktformular */
+.contact-form {
+    background-color: #F2EEE8;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
